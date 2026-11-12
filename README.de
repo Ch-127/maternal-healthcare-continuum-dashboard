@@ -1,0 +1,92 @@
+# West Hararghe Maternal Health Observatory
+
+An interactive research-oriented R Shiny application for exploring maternal healthcare utilization, continuum-of-care completion, healthcare access, and patient satisfaction in West Hararghe Zone, Oromia, Ethiopia.
+
+## Live Dashboard
+Explore the interactive application:
+[Launch the West Hararghe Maternal Health Observatory](https://ch-127.github.io/maternal-healthcare-continuum-dashboard/)
+
+## About the Project
+The West Hararghe Maternal Health Observatory is an interactive data visualization and statistical exploration platform developed to examine maternal healthcare utilization and completion of the maternal healthcare continuum in a community-based study conducted in West Hararghe Zone, Ethiopia.
+
+The application provides an accessible interface for exploring maternal healthcare indicators, identifying gaps across different stages of care, examining healthcare access barriers, and investigating women's reported satisfaction with maternal health services. The project aims to support evidence-informed maternal health research, statistical communication, and public health decision-making.
+
+## Key Features
+
+### 1. Overview Dashboard
+- Interactive summary indicators for antenatal care (ANC), skilled birth attendance (SBA), and postnatal care (PNC).
+- Overall maternal continuum-of-care (CoC) completion.
+- Descriptive summaries of maternal healthcare utilization.
+
+### 2. Continuum-of-Care Analysis
+- Visualization of completion patterns across ANC, SBA, and PNC.
+- Identification of gaps and drop-off points between healthcare stages.
+- Exploration of joint completion patterns.
+
+### 3. Healthcare Access and Autonomy
+- Transportation-related barriers.
+- Travel time to healthcare services.
+- Financial accessibility.
+- Women's mobility and ability to visit healthcare facilities independently.
+
+### 4. Patient Satisfaction Analysis
+Exploration of women's reported satisfaction regarding:
+- Time spent accessing healthcare services.
+- Maternal healthcare service delivery.
+- Distance to healthcare facilities.
+
+### 5. Bayesian Estimation
+- Beta-binomial Bayesian estimation of the overall maternal continuum-of-care completion proportion.
+- Posterior summaries and uncertainty intervals.
+- Quantification of uncertainty around the estimated completion proportion.
+
+### 6. Data Quality Audit
+- Variable-level missingness summaries.
+- Distinct-value counts.
+- Descriptive data-quality assessment.
+
+## Primary Outcome Definition
+Completion of the maternal healthcare continuum is defined as fulfilling all three of the following study-specific criteria:
+1. Antenatal care: At least four ANC visits during pregnancy.
+2. Skilled birth attendance: Delivery assisted by a skilled health professional (doctor, health officer, nurse, or midwife) at a health facility during the most recent birth.
+3. Postnatal care: At least one PNC check-up within six weeks after giving birth.
+Each component is coded as a binary indicator. Overall continuum completion is defined as:
+`CoC_i = ANC_i * SBA_i * PNC_i`
+A woman is classified as having completed the continuum only when all three components are fulfilled.
+
+## Technologies and Tools
+- R: Statistical computing and data analysis.
+- Shiny: Interactive web application development.
+- Shinylive: Deployment of Shiny applications as static web applications.
+- haven: Importing SPSS datasets.
+- dplyr: Data manipulation and transformation.
+- ggplot2: Statistical visualization.
+- DT: Interactive data tables.
+## Running the Application Locally
+To run the application on your computer:
+1. Clone or download this repository.
+2. Open the project directory in RStudio.
+3. Ensure `app.R` and `S1-Dataset.sav` are located in the root of the project directory (they are included in this repository).
+4. Install the required packages:
+```r
+install.packages(c(
+  "shiny",
+  "haven
+  "dplyr",
+  "ggplot2",
+  "DT"
+))
+5. Launch the application:
+shiny::runApp()
+Note on Data Privacy: To support the browser-based Shinylive deployment (via the docs folder), the de-identified dataset is included in this repository. Before sharing or adapting this repository for other datasets, ensure all data complies with the ethical approval and data-sharing guidelines of the author's institution.
+Author
+Chalachew Gashu
+Lecturer in Statistics
+Oda Bultum University
+Ethiopia
+ORCID: https://orcid.org/0009-0003-0569-0274
+Research interests: Biostatistics, Bayesian Statistics, Statistical Modelling, Machine Learning, and Health Data Analytics.
+GitHub: Ch-127
+
+Acknowledgment
+This application was developed to support the visualization, exploration, and communication of findings from maternal healthcare research in West Hararghe Zone, Ethiopia.
