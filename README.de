@@ -80,7 +80,7 @@ install.packages(c(
 shiny::runApp()
 Note on Data Privacy: To support the browser-based Shinylive deployment (via the docs folder), the de-identified dataset is included in this repository. Before sharing or adapting this repository for other datasets, ensure all data complies with the ethical approval and data-sharing guidelines of the author's institution.
 Author
-Chalachew Gashu
+Chalachew Gashu Animut
 Lecturer in Statistics
 Oda Bultum University
 Ethiopia
